@@ -23,11 +23,6 @@ ul {
     list-style: none;
 }
 
-/* Para que los enlaces hereden el color de texto y no tengan subrayado */
-a {
-    text-decoration: none;
-    color: inherit;
-}
 
 /* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
 *  el margin: auto; para tenerlo centrado fácilmente ;)
@@ -39,9 +34,24 @@ main {
 
 /* Recomendaciones! 
 *  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
-*
-*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)*/
+
+body {
+    font-family: Alkatra;
+    font-size: 20px;
+    line-height: 1.5;
+    color: black;
+}
+
+header{
+    padding: 20px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    }
+
+/*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
 *    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
 *
 *  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
@@ -54,24 +64,14 @@ main {
 *    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
 *    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
 */
-body {
-    font-family: Alkatra;
-    font-size: 20px;
-    line-height: 1.5;
-    color: black;
-}
 
-header{
-padding: 20px ;
-display: flex;
-justify-content: space-between;
-align-items: center;
 
-}
+
 
 nav ul {
     list-style: none;
     display: flex;
+
 }
 
 nav li{
@@ -86,10 +86,24 @@ nav li{
     font-size: 20px;
 }
 
+.descargacv {
+    background-color: rgb(13, 58, 241);
+    color:rgb(22, 240, 215);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1px 5px;
+}
+
+.descargacv:hover{
+    background-color: rgb(239, 79, 34);
+    color:rgb(87, 177, 236);
+    
+}
+
 .logo img {
-    max-width: 100%;
-    max-height: 400px;
-    margin-bottom: 10px;
+    max-width: 150%;
+    max-height: 600px;
+    margin-bottom: 20px;
     
 }
 
@@ -105,23 +119,128 @@ margin-bottom: 10px;
 .formacion {
     margin-top: 20px;
     margin-bottom: 20px;
+    padding: 20px 20px;
     border: 2px solid black;
-    background-color: cornflowerblue;
-   
-
-}
-
-.formacion {
-    font-size: 20px;
+    background-color: rgb(128, 207, 247);
     text-align: center;
-    font-style: italic;
+  }
+
+
+.formacion h1{
+text-decoration: underline;
+}
+
+.formacion h4 {
+    text-align: left;
+    text-decoration: underline;
+
 }
 
 
+.formacion p {
+    text-align: left;
+}
 
 .formacion li {
-    font-size: 20px;
     text-align: left;
-    font-style: normal;
+        
+}
+
+#contacto {
+    background-color: rgb(10, 245, 100);
+    padding: 20px 20px;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
     
+   
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+        
+}
+
+.grupos{
+    display: flex;
+    flex-direction:column;
+    margin: 10px;
+}
+
+label{
+    font-weight: bold;
+}
+
+input, textarea{
+    padding: 5px;
+    border-radius:6px;
+    border: 2px solid #7f87d5; 
+}
+
+input:hover{
+    border: 2px solid #020007;
+    }
+
+button{
+    background-color:#c05d05;
+    color:#d8eced;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover{
+    transition: 1s;
+    transform: scale(1.03);
+    background-color: #cebe0b;
+    color:#0d207d;
+}
+
+.iconos {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.grupoi {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+i:hover {
+    transition: 1.2s;
+    transform: scale(1.5);
+}
+
+footer {
+    background-color: #020007;
+    color:aqua;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+header {
+    flex-direction: column;
+    text-align: center;
+
+}
+.presentacion{
+    background-color: rgb(225, 173, 238);
+    color:#f3f2f4
+    text-align: center;
+}
+.formacion {
+    background-color: rgb(234, 236, 246);
+    color:rgb(9, 26, 24);
+}
 }
