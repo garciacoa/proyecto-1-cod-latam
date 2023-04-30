@@ -9,14 +9,8 @@
 *  cuyos valores asigna por defecto el navegador.
 */
 
-/* Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* Para que el scrolleo en la one page sea suave */
-    scroll-behavior: smooth;
-}
+   
+    
 
 /* Para quitar los puntos a los items de listas */
 ul {
@@ -32,16 +26,20 @@ main {
     margin: auto;
 }
 
-/* Recomendaciones! 
-*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)*/
+/* Estilos*/
 
 body {
-    font-family: Alkatra;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Alkatra';
     font-size: 20px;
     line-height: 1.5;
     color: black;
 }
+
+/*Header*/
 
 header{
     padding: 20px ;
@@ -51,32 +49,18 @@ header{
     
     }
 
-/*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
-*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
-*
-*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
-*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
-*
-*  - Usen mucho las herramientas para desarrolladores del navegador para ir
-*    probando el CSS que escriben, resolver dudas y problemas.
-*
-*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
-*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
-*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
-*/
-
-
 
 
 nav ul {
     list-style: none;
     display: flex;
-
+    margin-left: 5px  
 }
 
 nav li{
-    margin-right: 20px ;
+    margin-left: 20px;
 }
+
 
 .presentacion {
     box-sizing: border-box;
@@ -113,12 +97,15 @@ max-width: 100%;
 max-height: 300px;
 margin-top: 10px;
 margin-bottom: 10px;
+border-radius: 30%; 
+box-shadow: 0 0 15px;
 }
 
 
 .formacion {
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 0px;
     padding: 20px 20px;
     border: 2px solid black;
     background-color: rgb(128, 207, 247);
@@ -126,7 +113,7 @@ margin-bottom: 10px;
   }
 
 
-.formacion h1{
+.formacion h1 {
 text-decoration: underline;
 }
 
@@ -137,14 +124,10 @@ text-decoration: underline;
 }
 
 
-.formacion p {
+.formacion p, li {
     text-align: left;
 }
 
-.formacion li {
-    text-align: left;
-        
-}
 
 #contacto {
     background-color: rgb(10, 245, 100);
@@ -152,7 +135,7 @@ text-decoration: underline;
     border: 2px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
-    
+  
    
 }
 
@@ -173,13 +156,13 @@ label{
     font-weight: bold;
 }
 
-input, textarea{
+input, textarea {
     padding: 5px;
-    border-radius:6px;
+    border-radius: 6px;
     border: 2px solid #7f87d5; 
 }
 
-input:hover{
+input:hover, textarea:hover {
     border: 2px solid #020007;
     }
 
@@ -228,19 +211,72 @@ footer {
     padding: 15px;
 }
 
+/*Responsive*/
+
 @media (max-width: 768px) {
-header {
+/*Header*/
+    header {
     flex-direction: column;
+    padding:15px;
     text-align: center;
+    font-size: 16px;
 
 }
+
+/*Main*/
+
+main {
+    padding 20px;
+    font-size: 14px;
+}
+
+.logo img {
+    max-width: 60%;
+   margin-left: 70px;
+    
+}
+
+
+.foto img {
+    max-width: 12rem;
+    border-radius: 50% ;
+    }
+
 .presentacion{
     background-color: rgb(225, 173, 238);
     color:#f3f2f4
+    font-size: 14px;
     text-align: center;
 }
 .formacion {
     background-color: rgb(234, 236, 246);
     color:rgb(9, 26, 24);
+    font-size: 14px;
 }
+
+.grupos {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    text-align: center;
+    
+       
+}
+
+
+button{
+    background-color:#0840dc;
+    }
+    #contacto {
+        background-color: rgb(37, 151, 227);
+              }
+
+    
+         .iconos {
+            display: flex;
+            max-width: 50%;
+            margin: 0 auto;
+        
+                 }
+
 }
